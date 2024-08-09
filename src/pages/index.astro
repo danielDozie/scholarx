@@ -1,0 +1,22 @@
+---
+import HomeLayout from "../layouts/HomeLayout.astro";
+import Hero from "../components/home/Hero.astro";
+import HomeStats from "../components/home/HomeStats.astro";
+import FocusSection from "../components/home/FocusSection.astro";
+import ProductsSection from "../components/home/ProductsSection.astro";
+import ProjectsSection from "../components/home/ProjectsSection.astro";
+import Testimonials from "../components/home/Testimonials.astro";
+import NewsletterSection from "../components/home/NewsletterSection.astro";
+---
+
+<HomeLayout title="ScholarX">
+    <div class="home">
+        <Hero />
+        <HomeStats />
+        <FocusSection />
+        <ProductsSection />
+        <ProjectsSection />
+        <Testimonials />
+        <NewsletterSection />
+    </div>
+</HomeLayout>
