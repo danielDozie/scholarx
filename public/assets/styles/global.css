@@ -1,6 +1,11 @@
+html{
+  font-family: Mulish, sans-serif;
+}
+
 body {
   margin: 0;
   line-height: normal;
+  position: 'relative';
 }
 
 /* Home */
@@ -826,7 +831,7 @@ body {
 .project-image-item {
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(./public/rectangle-1031@2x.png);
+  background-image: url(/assets/rectangle-1031@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -852,7 +857,7 @@ body {
 .project-image-placeholder {
   flex: 1;
   align-items: flex-end;
-  background-image: url(./public/rectangle-74@2x.png);
+  background-image: url(/assets/rectangle-74@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -897,7 +902,7 @@ body {
 }
 .rectangle-parent10 {
   align-items: flex-end;
-  background-image: url(./public/rectangle-75@2x.png);
+  background-image: url(/assets/rectangle-75@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -923,7 +928,7 @@ body {
 }
 .rectangle-parent11 {
   align-items: flex-end;
-  background-image: url(./public/rectangle-76@2x.png);
+  background-image: url(/assets/rectangle-76@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3323,7 +3328,7 @@ body {
 .project-row-two {
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(./public/rectangle-103@2x.png);
+  background-image: url(/assets/rectangle-103@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3378,7 +3383,7 @@ body {
 .project-two-titles {
   flex: 1;
   align-items: flex-end;
-  background-image: url(./public/rectangle-105@2x.png);
+  background-image: url(/assets/rectangle-105@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3425,7 +3430,7 @@ body {
 .rectangle-container {
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(./public/rectangle-1031@2x.png);
+  background-image: url(/assets/rectangle-1031@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3459,7 +3464,7 @@ body {
 .frame-div {
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(./public/rectangle-1051@2x.png);
+  background-image: url(/assets/rectangle-1051@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3478,7 +3483,7 @@ body {
   flex-direction: row;
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(./public/rectangle-1032@2x.png);
+  background-image: url(/assets/rectangle-1032@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3514,7 +3519,7 @@ body {
   align-items: flex-end;
   justify-content: flex-start;
   padding: 0;
-  background-image: url(./public/rectangle-1052@2x.png);
+  background-image: url(/assets/rectangle-1052@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -3582,7 +3587,7 @@ body {
 .rectangle-parent7 {
   align-items: flex-end;
   justify-content: flex-start;
-  background-image: url(./public/rectangle-1053@2x.png);
+  background-image: url(/assets/rectangle-1053@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -4670,3 +4675,75 @@ body {
     gap: 20px;
   }
 }
+
+/* Menu screen */
+
+.menu-screen{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  transition: transform 0.4s ease-in-out;
+  transform: translateY(-100%); 
+}
+.menu-screen.active {
+  transform: translateY(0%); /* Slide up when active */
+}
+
+.menu-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+}
+
+.content-left{
+  background-color: #000081;
+  width: 50%;
+  height: 100%;
+}
+
+.content-right{
+  width: 50%;
+  height: 100%;
+  background-image: url('/assets/nav_bg.png');
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+.menu-bg-cover{
+  height: 100%;
+  background-color: black;
+  opacity: .6;
+}
+
+.menu-content{
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+menu-group {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.menu-item{
+  font-weight: 700;
+  font-size: 1.4em;
+  margin-bottom: 50px;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#openMenuBtn{
+  cursor: pointer;
+};

@@ -1,0 +1,37 @@
+---
+
+const menuItems = [
+    {
+        id: 1,
+        item: 'About us'
+    },
+    {
+        id: 2,
+        item: 'Contact us'
+    },
+    {
+        id: 3,
+        item: 'Projects'
+    },
+    {
+        id: 4,
+        item: 'Careers'
+    },
+] as const;  
+---
+
+<section class="menu-screen" id="menuPane">
+    <div class="menu-container">
+        <div class="content-left">
+            <div class="menu-content">
+                    <ul class="menu-group">
+                        {menuItems.map(({id, item}) => <a href={'/'+item.toLowerCase()}><li class="menu-item">{item}</li></a>)}
+                    </ul> 
+            </div>
+        </div>
+        <div class="content-right">
+            <svg style="position:absolute; z-index:999999; right: 10%; top: 12%; cursor: pointer;" id="closeBtn" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 21L21 1M1 1L21 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+           <div class="menu-bg-cover"/>
+        </div>
+    </div>
+</section>

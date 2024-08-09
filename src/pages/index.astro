@@ -1,5 +1,4 @@
 ---
-import HomeLayout from "../layouts/HomeLayout.astro";
 import Hero from "../components/home/Hero.astro";
 import HomeStats from "../components/home/HomeStats.astro";
 import FocusSection from "../components/home/FocusSection.astro";
@@ -7,9 +6,10 @@ import ProductsSection from "../components/home/ProductsSection.astro";
 import ProjectsSection from "../components/home/ProjectsSection.astro";
 import Testimonials from "../components/home/Testimonials.astro";
 import NewsletterSection from "../components/home/NewsletterSection.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<HomeLayout title="ScholarX">
+<Layout title="ScholarX">
     <div class="home">
         <Hero />
         <HomeStats />
@@ -19,4 +19,4 @@ import NewsletterSection from "../components/home/NewsletterSection.astro";
         <Testimonials />
         <NewsletterSection />
     </div>
-</HomeLayout>
+</Layout>
