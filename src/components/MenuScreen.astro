@@ -3,19 +3,23 @@
 const menuItems = [
     {
         id: 1,
-        item: 'About us'
+        item: 'About us',
+        slug: 'about'
     },
     {
         id: 2,
-        item: 'Contact us'
+        item: 'Contact us',
+        slug: 'contact'
     },
     {
         id: 3,
-        item: 'Projects'
+        item: 'Projects',
+        slug: 'projects'
     },
     {
         id: 4,
-        item: 'Careers'
+        item: 'Careers',
+        slug: 'careers'
     },
 ] as const;  
 ---
@@ -25,7 +29,7 @@ const menuItems = [
         <div class="content-left">
             <div class="menu-content">
                     <ul class="menu-group">
-                        {menuItems.map(({id, item}) => <a href={'/'+item.toLowerCase()}><li class="menu-item">{item}</li></a>)}
+                        {menuItems.map(({id, item, slug}) => <a href={'/' + slug}><li class="menu-item">{item}</li></a>)}
                     </ul> 
             </div>
         </div>
